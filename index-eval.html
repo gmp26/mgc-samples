@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+	<title>Experiment1</title>
+	
+	<!-- Pre-installed scripts - available everywhere on NRICH so you don't have to upload them -->
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	    extensions: ["tex2jax.js"],
+	    jax: ["input/TeX", "output/HTML-CSS"],
+	    tex2jax: {
+	      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+	      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+	      processEscapes: true
+	    },
+	    "HTML-CSS": { availableFonts: ["TeX"] }
+	  });
+	</script>
+	<script type="text/javascript"
+	   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+	
+	<!-- List any necessary extra script URLs in a depends.txt.
+	 
+	depends.txt
+	===========
+	http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js
+	app.js
+	mgcFuncGen.js
+	mgcEval.js
+	
+	Then upload it with local scripts and CSS files i.e.
+	upload: depends.txt, app.js mgcFuncGen.js, mgcEval.js, and custom.css.
+	
+	-->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+	<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="mgcFuncGen.js" type="text/javascript" charset="utf-8"></script>
+	<script src="mgcEval.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	
+<!-- copy and paste this div into the NRICH editor in SOURCE mode -->
+<div ng-app="app" ng-controller="Ctrl">
+	<p>Here, to 3 significant figures, 
+		are 2 functions of </p>
+	<p class="display">$x = $ <input class="xinput" ng-model="x" type="number"></input></p>
+	<p class="display">$f(x) = $ <span class="mgc-eval" f="x->3*sin(x)+2" sigfigs="3"> </span>,</p>
+	<p class="display">$g(x) = $ <span class="mgc-eval" f="x->2*x-2" sigfigs="3"> </span></p>
+	<p><i>Before continuing, see if you can get to know these functions better. Use scrolling controls on the x input box to give you access to lots of values quickly. You can type in decimal values.</i></p>
+	<ol>
+	<li>
+	<p>Experiment until you find a value of $x$ where $f(x)$ appears to be the same as $g(x)$.</p>
+	<p>How did you narrow the possibilities down to this value of $x$? Is there a general method?</p>
+	<p>How close do you think $f(x)$ and $g(x)$ really are at this value? Can you find a value of $x$ where $f(x)$ should be even closer to $g(x)$?</p>
+	</li>
+	<li>
+		<p>Here, again to 3 significant figures, are two more functions of
+		<p class="display">$x = $ <input class="xinput" ng-model="x" type="number">.</p>
+		<p class="display">$f(x) = $ <span class="mgc-eval" f="x->3*sin(x)+2" sigfigs="3"> </span></input> as before, but also:</p>
+		<p class="display">$h(x) = $ <span class="mgc-eval" f="x->x/4-1" sigfigs="3"> </span></p>
+		<p class="display">$j(x) = $ <span class="mgc-eval" f="x->x*x-25" sigfigs="3"> </span></p>
+		
+	<p>Experimentally, find values of $x$ and $y$ so that $f(x) = h(x)$ and $f(y) = j(y)$. Compare your findings with others and discuss.</p>
+	</li>
+	<li>
+	<p>What sorts of function are $f, g, h,$ and $j$? Can you find write down expressions for $f, g, h$ and $j$? </p>
+	</li>
+	</ol>
+</div>
+
+
+</body>
+</html>
