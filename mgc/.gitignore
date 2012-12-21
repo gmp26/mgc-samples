@@ -1,0 +1,4 @@
+node_modules
+*.coffee.js
+.idea
+.DS_Store

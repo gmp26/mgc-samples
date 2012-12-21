@@ -1,0 +1,76 @@
+/**
+ * import components to builds angular-ui.css
+ */
+
+/* more specificity required here to overide default borders */
+
+.ui-spinner {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.ui-spinner a.ui-spinner-button {
+  margin-bottom: 1px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.ui-spinner .ui-icon {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0.8;
+  zoom: 1.8;
+}
+
+.ui-spinner .ui-icon-triangle-1-s {
+  /* need to fix icons sprite */
+
+  background-position: -65px -16px;
+}
+
+.ui-spinner-input {
+  padding: 0;
+  margin: 3px 22px 3px 3px !important;
+  vertical-align: middle;
+  background: none;
+  border: none;
+}
+
+.ui-spinner-button {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 19px;
+  height: 50%;
+  padding: 0;
+  margin: 4px;
+  overflow: hidden;
+  font-size: .5em;
+  text-align: center;
+  cursor: default;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /*display:none;*/
+
+}
+
+/* vertical centre icon */
+
+.ui-spinner-up {
+  top: 0;
+}
+
+.ui-spinner-down {
+  bottom: 0;
+}
+

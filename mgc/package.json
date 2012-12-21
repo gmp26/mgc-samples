@@ -1,0 +1,20 @@
+{
+  "author": "https://github.com/gmp26/mgc/graphs/contributors",
+  "name": "mgc",
+  "description": "MGC - Maths Education DSL in AngularJS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/gmp26/mgc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmp26/mgc.git"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-recess": "~0.1.3",
+    "async": "0.1.x",
+    "testacular": "~0.4.0"
+  }
+}
