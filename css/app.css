@@ -4,12 +4,21 @@ body {
 section {
 	padding-top: 40px;
 }
+/*
 .icon-github {
 	background: no-repeat url('../lib/bootstrap/docs/assets/img/bs-docs-twitter-github.png');
 	width: 16px;
 	height: 16px;
 }
+*/
 
+/* spinner */
+.icon-arrow-up::before {
+	font-size:14px;
+}
+.icon-arrow-down::before {
+	font-size:14px;
+}
 
 /*** Reset ***/
 .ui-reset {
