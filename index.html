@@ -89,12 +89,14 @@
 						<div class="well">
 						
 							<div class="input-prepend input-append">
-							  <button class="btn icon-arrow-left" type="button"></button>
-							  <input class="span2" id="appendedPrependedInput" type="number" value="{{amount}}">
-							  <button class="btn icon-arrow-right" type="button"></button>
+							  <button class="btn icon-arrow-left" type="button" ng-click="decrement()"></button>
+							  <input class="span2" ng-model="amount" type="number" value="{{amount}}">
+							  <button class="btn icon-arrow-right" type="button" ng-click="increment()"></button>
 							</div>
-							<input type="number" ng-model="amount" value="{{amount}}" mgc-stepper="{icons: {down: 'icon-arrow-down', up: 'icon-arrow-up' }}">
-							<input type=number ng-model="amount" value="{{amount}}">
+							
+							<input type="number" ng-model="amount" value="{{amount}}" mgc-stepper="{icons: {left: 'icon-arrow-down', right: 'icon-arrow-right' }}">
+							
+
 							<div>Stepper value = {{amount}}</div>
 						</div>
 					</div>
@@ -107,33 +109,9 @@
 				<div class="row">
 					<div class="span12">
 						<h3>How?</h3>
-						<p>This example shows how you can use <code>mgc.config</code> for greater convenience. You can still pass the configuration as the expression (even in addition to <code>mgc.config</code>).</p>
+						<p></p>
 <pre class="prettyprint linenums" ng-non-bindable>
-&lt;span mgc-currency ng-model=&quot;nums.pos&quot;&gt;&lt;/span&gt;
-&lt;span ui-currency=&quot;{ symbol: '$', zero: 'my-zero-class'}&quot; ng-model=&quot;nums.zero&quot;&gt;&lt;/span&gt;
-&lt;span ui-currency ng-model=&quot;nums.neg&quot;&gt;&lt;/span&gt;
-
-&lt;script&gt;
-myModule.value(&#x27;ui.config&#x27;, {
-   currency: {
-      symbol: &#x27;USD$&#x27;,
-   }
-});
-&lt;/script&gt;
-&lt;style&gt;
-span[ui-currency] {
-  display:block;
-}
-.ui-currency-pos {
-  font-weight: bold;
-}
-.ui-currency-neg {
-  font-size: 125%;
-}
-.my-zero-class {
-  color: #000;
-}
-&lt;/style&gt;
+	<b>Hello</b>
 </pre>
 					</div>
 				</div>

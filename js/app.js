@@ -26,4 +26,10 @@ angular.module('demoApp', ['mgc'], function($locationProvider) {
 	.controller('StepperCtrl', function($scope) {
 		console.log('StepperCtrl called');
 		$scope.amount = 0;
+		$scope.increment = function() {
+			$scope.amount++;
+		};
+		$scope.deccrement = function() {
+			$scope.amount--;
+		}
 	});

@@ -8,9 +8,12 @@ angular.module('mgc.directives').directive('mgcStepper', ['mgc.config', function
 	</div>';
 	return {
 		restrict: 'A',
+    require: '?ngModel', // get a hold of NgModelController
 		// supports using directive as an attribute, with options as the attribute value
-		link: function(scope, element, attrs, controller) {
+		link: function(scope, element, attrs, ngModel) {
 			var opts;
+
+			if(!ngModel) return;
 
 			// opts is link element-specific options merged on top of global defaults. 
 			// If you only extend the global default, then all instances would override each other
